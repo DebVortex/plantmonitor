@@ -45,7 +45,7 @@ def main(broker, port, interface):
 
 def discover_and_scan(interface):
     sensors = MiPlant.discover(interface_index=0, timeout=5)
-    [sensor.scan() for sensor in sensors]
+    [sensor.read() for sensor in sensors]
     return sensors
 
 
