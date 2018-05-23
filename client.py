@@ -1,4 +1,6 @@
 # encoding: utf-8
+import json
+
 import click
 from miplant import MiPlant
 from paho.mqtt.client import Client
