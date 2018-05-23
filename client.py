@@ -32,7 +32,7 @@ def main(broker, port, interface):
                 'conductivity': sensor.conductivity
             })
             channel = "sensors/plantsensors/{addr}".format(addr=sensor.address)
-            client.publish(channel, json.dumps(data))
+            client.publish(channel, json.dumps(payload))
         client.loop_stop()
     else:
         for sensor in sensors:
